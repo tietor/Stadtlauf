@@ -160,7 +160,6 @@ public class Main {
     persons.sort(Comparator.comparing(Person::getName));
     System.out.println("Namen-Liste wird erstellt");
     PrintWriter printWriter = new PrintWriter("output/namen.ref.txt");
-    System.out.println(String.format("%-10d%-10s%10d%4d%10tT", 15, "Amschwand", 2, 32, LocalTime.now()));
     persons.forEach(person -> {
       printWriter.format("%-10d%-20s%10d%4d%10tT", person.getStartNumber(), person.getName(),
           person.getCategory().getCategoryNumber(), person.getRanking(), person.getDuration());
